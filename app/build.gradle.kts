@@ -14,11 +14,11 @@ val config = Properties()
 config.load(FileInputStream(configPropertiesFile))
 
 android {
-    namespace = "com.android.mvvm"
+    namespace = "com.android.track_spend"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.android.mvvm"
+        applicationId = "com.android.track_spend"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -93,4 +93,16 @@ dependencies {
 
     //coroutines dependency
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.1")
+
+    //ROOM dependancy
+    val roomVersion = "2.6.1"
+    implementation("androidx.room:room-runtime:$roomVersion")
+    annotationProcessor("androidx.room:room-compiler:$roomVersion")
+
+    //Hilt dependency for testing
+    androidTestImplementation("com.google.dagger:hilt-android-testing:2.28-alpha")
+    kaptAndroidTest ("com.google.dagger:hilt-android-compiler:2.28-alpha")
+
+
+
 }

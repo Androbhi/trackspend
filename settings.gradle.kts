@@ -13,6 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "MVVM_BASE"
+rootProject.name = "track_spend"
 include(":app")
  
